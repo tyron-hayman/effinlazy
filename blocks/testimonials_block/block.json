@@ -1,0 +1,16 @@
+{
+    "name": "acf/testimonials-block",
+    "title": "Testimonials Block",
+    "description": "A testimonials block for the EffinLazy theme.",
+    "style": [ "file:./testimonials_block.css" ],
+    "category": "effinlazy-block-category",
+    "icon": "format-status",
+    "keywords": ["testimonials"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "testimonials_block.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

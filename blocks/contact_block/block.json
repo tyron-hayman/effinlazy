@@ -1,0 +1,16 @@
+{
+    "name": "acf/contact-block",
+    "title": "Contact Block",
+    "description": "A contact form block allowing your visitors to contact you.",
+    "style": [ "file:./contact_block.css" ],
+    "category": "effinlazy-block-category",
+    "icon": "phone",
+    "keywords": ["contact"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "contact_block.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

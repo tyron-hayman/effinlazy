@@ -1,0 +1,16 @@
+{
+    "name": "acf/landing-block",
+    "title": "Landing Block",
+    "description": "A landing block for the EffinLazy theme.",
+    "style": [ "file:./landing_block.css" ],
+    "category": "effinlazy-block-category",
+    "icon": "embed-generic",
+    "keywords": ["landing"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "landing_block.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

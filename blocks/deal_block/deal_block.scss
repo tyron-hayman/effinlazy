@@ -1,0 +1,70 @@
+@use "../../assets/css/variables" as v;
+
+.acf-block-preview {
+    width: 100%!important;
+    max-width: 100%!important;
+}
+
+.ef3_deal_block {
+    display: flex;
+    background: v.$black;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 0;
+    .ef3_about_block_content {
+        width: 80%;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+        h3 {
+            font-size: 5vw;
+            line-height: 5vw;
+            color: v.$white;
+            font-weight: 900;
+        }
+        p {
+            color: v.$white;
+        }
+        .ef3_about_block_content_l {
+            width: 30%;
+        }
+        .ef3_about_block_content_r {
+            width: 65%;
+            .ef3_buttons {
+                display: inline-block;
+            }
+        }
+        .ef3_deal_block_image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            background-size: cover!important;
+            -webkit-background-size: cover!important;
+            -moz-background-size: cover!important;
+            margin-bottom: 30px;
+            border: v.$gold 4px solid
+        }
+        .ef3_buttons {
+            &:hover {
+                background: v.$white;
+                color: v.$black;
+            }
+        }
+    }
+    @media (max-width: v.$small) {
+        .ef3_about_block_content {
+            h3 {
+                font-size: 10vw;
+                line-height: 10vw;
+            }
+            .ef3_about_block_content_l, .ef3_about_block_content_r {
+                width: 100%;
+            }
+            .ef3_about_block_content_l {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

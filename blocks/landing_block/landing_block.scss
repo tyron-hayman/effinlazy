@@ -1,0 +1,100 @@
+@use "../../assets/css/variables" as v;
+
+.acf-block-preview {
+    width: 100%!important;
+    max-width: 100%!important;
+    h2, h3, span, .ef3_landing_block_image_right {
+        opacity: 1!important;
+    }
+    @include v.globalButton(1);
+}
+.ef3_landing_block {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .ef3_landing_block_content {
+        width: 60%;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .ef3_landing_block_content_inner {
+            width: 90%;
+        }
+        h2 {
+            font-size: 5vw;
+            line-height: 5vw;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: v.$black;
+            span {
+                display: inline-block;
+                padding-right: 1rem;
+                opacity: 0;
+            }
+        }
+        h3 {
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            font-weight: 300;
+            color: v.$darkgray;
+            opacity: 0;
+        }
+        a {
+            display: inline-block;
+            margin-top: 40px;
+            opacity: 0;
+        }
+    }
+    .ef3_landing_block_image_right {
+        position: relative;
+        width: 40%;
+        height: 100vh;
+        opacity: 0;
+        div {
+            background-size: cover!important;
+            -webkit-background-size: cover!important;
+            -moz-background-size: cover!important;
+            position: absolute;
+            left: 0;
+            bottom: 10%;
+            right: 0;
+            top: 10%;
+            z-index: 2;
+            border-radius: 25px;
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+        }
+    }
+    @media (max-width: v.$small) {
+        width: 90%;
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 100px;
+        flex-wrap: wrap;
+        justify-content: start;
+        .ef3_landing_block_content {
+            width: 100%;
+            order: 2;
+            h2 {
+                font-size: 9vw;
+                line-height: 9vw;
+            }
+        }
+        .ef3_landing_block_image_right {
+            width: 70%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            order: 1;
+            div {
+                left: 10%;
+            }
+        }
+    }
+}
