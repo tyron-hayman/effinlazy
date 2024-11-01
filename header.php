@@ -66,15 +66,7 @@ $logoImage = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 
 <?php if ( is_front_page() ) { ?>
 <div id="siteLoader">
-    <p>Justing getting things ready......</p>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <p><span>0</span>%</p>
 </div>
 <?php } ?>
 

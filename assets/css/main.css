@@ -366,22 +366,20 @@ button:focus {
   z-index: 1000;
   display: flex;
   justify-content: start;
+  background: rgb(21, 21, 21);
 }
 #siteLoader p {
   position: absolute;
   display: block;
-  width: 100%;
   z-index: 1;
   left: 0;
-  top: 50%;
-  color: rgb(242, 242, 242);
-  text-align: center;
-  font-size: 3vw;
-}
-#siteLoader div {
-  flex-grow: 1;
-  height: 100vh;
-  background: rgb(21, 21, 21);
+  bottom: 0;
+  padding: 30px 0;
+  margin: 0;
+  color: #ffffff;
+  font-size: 2rem;
+  text-align: right;
+  border-bottom: #FD644B 2px solid;
 }
 
 #siteFooter {

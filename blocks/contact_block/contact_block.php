@@ -23,6 +23,7 @@ $block .= '<div class="ef3_contact_block">';
 
     $block .= '<div class="ef3_contact_block_contact_form">';
         $block .= '<form class="ef3_contact_form">';
+            $block .= '<input type="text" class="ef3_contact_fields_scontrol" name="ef3_contact_fields_scontrol" />';
             $block .= '<input type="text" class="ef3_contact_fields" name="ef3_contact_name" placeholder="Your name*" />';
             $block .= '<input type="email" class="ef3_contact_fields" name="ef3_contact_email" placeholder="Your email*" />';
             $block .= '<input type="text" class="ef3_contact_fields" name="ef3_contact_subject" placeholder="The Subject*" />';

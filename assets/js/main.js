@@ -26,7 +26,7 @@
         $('#global_search_wrap_bg').on("click", () => {
             closeSearch();
         });
-        $('#global_search_input').on("keypress", (e) => {
+        $('#global_search_input').on("keyup", (e) => {
             $('.search_loader').addClass("show");
             clearTimeout(keyUpdated);
             keyUpdated = setTimeout(async () => {
@@ -80,8 +80,11 @@
         // contact page
         $('.ef3_contact_form').on('submit', (e)=> {
             let dataElem = $(e.target).find('.ef3_contact_fields');
+            let dataElemScontrol = $(e.target).find('.ef3_contact_fields_scontrol');
             let formData = $(e.target)
             let dataArr = [];
+            let spamFilter = [];
+
             dataElem.each((i)=> {
                 let elem = $(dataElem[i]).val();
                 if ( elem == "" || elem == null ) {
@@ -89,6 +92,18 @@
                     $(dataElem[i]).addClass("errored");
                 }
             });
+
+            dataElemScontrol.each((i)=> {
+                let elem = $(dataElemScontrol[i]).val();
+                if ( elem != "" && elem != null ) {
+                    spamFilter.push("error");
+                }
+            });
+
+            if ( spamFilter.length > 0 ) {
+                alert("Do not pass go, do not collect $200!");
+                return false;
+            }
 
             if ( dataArr.length > 0 ) {
                 return false;
@@ -155,15 +170,26 @@
     const init = () => {
         const siteLoader = $('#siteLoader');
         if ( siteLoader.length > 0 ) {
-            gsap.to("#siteLoader div",
+            const loaderAni = gsap.to("#siteLoader p",
                 { 
-                    height : 0,
-                    stagger : 0.05,
-                    duration : 0.25,
+                    width : '100%',
+                    duration : 2,
+                    onUpdate: () => {
+                        let curr = Math.round((loaderAni.time() / 2 ) * 100 );
+                        $('#siteLoader p span').html(curr);
+                    },
                     onComplete : () => {
-                        siteLoader.fadeOut(0.2, () => {
-                            loadAnimations();
-                        })
+                        gsap.to("#siteLoader",
+                            { 
+                                height : 0,
+                                duration : 0.5,
+                                onComplete : () => {
+                                    siteLoader.fadeOut(0.2, () => {
+                                        loadAnimations();
+                                    })
+                                }
+                            }
+                        );
                     }
                 }
             );
@@ -260,20 +286,6 @@
                     }
                 );
             });
-        }
-        // About blocks
-        if ( $('.ef3_about_block').length > 0 ) {
-            gsap.set('.ef3_about_block_content', { y : 50, opacity : 0 });
-            gsap.to('.ef3_about_block_content',
-                { 
-                    scrollTrigger: {
-                        trigger: '.ef3_about_block',
-                        start: '-400px top',
-                    },
-                    opacity : 1,
-                    y: 0
-                }
-            );
         }
     }
 

@@ -50,6 +50,9 @@
 .ef3_contact_block .ef3_contact_block_content .ef3_contact_block_contact_form input[type=text].errored, .ef3_contact_block .ef3_contact_block_content .ef3_contact_block_contact_form input[type=email].errored, .ef3_contact_block .ef3_contact_block_content .ef3_contact_block_contact_form textarea.errored {
   border-color: #ff0000;
 }
+.ef3_contact_block .ef3_contact_block_content .ef3_contact_block_contact_form .ef3_contact_fields_scontrol {
+  display: none;
+}
 .ef3_contact_block .ef3_contact_block_content .ef3_contact_block_contact_form textarea {
   width: 100%;
   height: 300px;
