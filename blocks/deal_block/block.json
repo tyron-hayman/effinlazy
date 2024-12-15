@@ -1,0 +1,16 @@
+{
+    "name": "acf/deal-block",
+    "title": "Deal Block",
+    "description": "Time to close that deal and get the client!",
+    "style": [ "file:./deal_block.css" ],
+    "category": "effinlazy-block-category",
+    "icon": "money-alt",
+    "keywords": ["clients"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "deal_block.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

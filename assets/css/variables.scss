@@ -1,0 +1,39 @@
+// Bradning
+$black : rgb(21,21,21);
+$white : #ffffff;
+$gray : #606060;
+$lightgray: rgb(242,242,242);
+$darkgray : #101010;
+$gold :#FD644B;
+// screen sizes
+$small: 980px;
+$screen: 1200px;
+// Mixins
+@mixin globalButton($opacity) {
+    .ef3_buttons {
+        background: $gold;
+        border-radius: 9999px;
+        -webkit-border-radius: 9999px;
+        -moz-border-radius: 9999px;
+        -o-border-radius: 9999px;
+        padding: 1rem 3rem;
+        font-weight: 600;
+        color: $black;
+        transition: all 0.5s ease-out;
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        @if $opacity {
+            opacity: $opacity!important;
+        }
+        &:hover {
+            background: $black;
+            color: $white;
+        }
+    }
+}
+
+@mixin globalShadow {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}

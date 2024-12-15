@@ -1,0 +1,40 @@
+.acf-block-preview {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.acf-block-preview .ef3_heading_block {
+  width: 70%;
+  max-width: 70%;
+  margin: auto;
+}
+
+.ef3_heading_block {
+  margin-bottom: 0px;
+}
+.ef3_heading_block h1 {
+  font-size: 4vw;
+  font-weight: 400;
+  color: rgb(21, 21, 21);
+}
+.ef3_heading_block h2 {
+  font-size: 3vw;
+  font-weight: 400;
+  color: rgb(21, 21, 21);
+}
+.ef3_heading_block h3 {
+  font-size: 2vw;
+  font-weight: 400;
+  color: rgb(21, 21, 21);
+}
+.ef3_heading_block h4, .ef3_heading_block h5, .ef3_heading_block h6 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: rgb(21, 21, 21);
+}
+@media (max-width: 980px) {
+  .ef3_heading_block h1, .ef3_heading_block h2, .ef3_heading_block h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: rgb(21, 21, 21);
+  }
+}/*# sourceMappingURL=headings_block.css.map */

@@ -1,0 +1,16 @@
+{
+    "name": "acf/headings-block",
+    "title": "Headings Block",
+    "description": "Main headings for the pages you create!",
+    "style": [ "file:./headings_block.css" ],
+    "category": "effinlazy-block-category",
+    "icon": "format-status",
+    "keywords": ["about"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "headings_block.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

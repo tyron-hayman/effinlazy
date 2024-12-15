@@ -1,0 +1,114 @@
+@use "../../assets/css/variables" as v;
+
+.acf-block-preview {
+    width: 100%!important;
+    max-width: 100%!important;
+    .ef3_video_iframe {
+        .ef3_video_blinders {
+            width: 0px!important;
+        }
+    }
+}
+
+.ef3_services_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 0;
+    .ef3_services_block_content {
+        width: 80%;
+        h3 {
+            text-align: center;
+            color: v.$black;
+            font-size: 3rem;
+            line-height: 4rem;
+            font-weight: 900;
+            margin-bottom: 60px;
+            &.ef3_services_block_subtitle {
+                margin-top: 100px;
+            }
+        }
+        h4 {
+            display: block;
+            color: v.$black;
+            font-size: 2rem;
+            line-height: 3rem;
+            font-weight: 900;
+            margin: 0 0 30px 0;
+        }
+        .ef3_service_block_footer {
+            width: 70%;
+            margin: 100px auto 0 auto;
+            text-align: center;
+        }
+        .ef3_services_cols_main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5%;
+            .ef3_services_cols {
+                width: 40%;
+                padding: 2.5%;
+                border-radius: 25px;
+                -webkit-border-radius: 25px;
+                -moz-border-radius: 25px;
+                background: v.$white;
+                h4 {
+                    font-size: 2rem;
+                    margin-bottom: 30px;
+                    color: v.$black;
+                    font-weight: 900;
+                }
+                p, li {
+                    color: v.$black;
+                    margin-bottom: 20px;
+                }
+                ul {
+                    margin: 0 0 0 20px;
+                }
+                li {
+                    margin: 0;
+                    list-style: '\2714';
+                    padding: 0 0 0 5px;
+                }
+                a {
+                    margin-top: 30px;
+                    display: inline-block;
+                }
+                .ef3_buttons {
+                    background: v.$gold;
+                    color: v.$white;
+                    &:hover {
+                        background: v.$black;
+                        color: v.$white;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: v.$small) {
+        .ef3_services_block_content {
+            .ef3_services_cols_main {
+                flex-wrap: wrap;
+                .ef3_services_cols {
+                    width: 100%;
+                    padding: 40px;
+                    margin-bottom: 20px;
+                    .ef3_buttons {
+                        background: v.$gold;
+                        color: v.$white;
+                        &:hover {
+                            background: v.$black;
+                            color: v.$white;
+                        }
+                    }
+                }
+            }
+            .ef3_service_block_footer {
+                width: 100%;
+                margin: 100px auto 0 auto;
+                text-align: center;
+            }
+        }
+    }
+}

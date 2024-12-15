@@ -1,0 +1,118 @@
+@use "../../assets/css/variables" as v;
+
+.acf-block-preview {
+    width: 100%!important;
+    max-width: 100%!important;
+}
+
+.ef3_contact_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    position: relative;
+    iframe {
+        width: 100%;
+    }
+    .ef3_contact_block_content {
+        width: 90%;
+        h1 {
+            font-size: 5rem;
+            font-weight: 400;
+        }
+        h2 {
+            font-size: 2rem;
+            font-weight: 400;
+        }
+        h3 {
+            font-size: 4rem;
+            font-weight: 400;
+        }
+        .ef3_contact_block_contact_form {
+            padding: 100px 0;
+            .ef3_contact_form {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+            input[type="text"], input[type="email"], textarea {
+                width: 49%;
+                padding: 20px;
+                border: rgba(0,0,0,0.1) 2px solid;
+                border-radius: 25px;
+                -webkit-border-radius: 25px;
+                -moz-border-radius: 25px;
+                background: v.$lightgray;
+                font-size: 1.25rem;
+                position: relative;
+                &.errored {
+                    border-color: #ff0000;
+                }
+            }
+            .ef3_contact_fields_scontrol {
+                display: none;
+            }
+            textarea {
+                width: 100%;
+                height: 300px;
+            }
+            button {
+                background: v.$black;
+                padding: 20px  40px;
+                color: v.$white;
+                margin-top: 30px;
+                font-size: 1.25rem;
+                border-radius: 25px;
+                -webkit-border-radius: 25px;
+                -moz-border-radius: 25px;
+            }
+        }
+    }
+    .ef3_contact_frame_wrap {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        div:nth-child(1) {
+            width: 40%;
+            padding-top: 30px;
+            p {
+                font-size: 5vw;
+                color: v.$black;
+                margin-top: 30px;
+            }
+        }
+        div:nth-child(2) {
+            width: 60%;
+            
+        }
+    }
+    @media (max-width: v.$small) {
+        .ef3_contact_block_content {
+            h1 {
+                font-size: 5rem;
+                line-height: 5rem;
+                margin-bottom: 20px;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .ef3_contact_block_contact_form {
+                padding: 100px 0;
+                input[type="text"], input[type="email"], textarea {
+                    width: 100%;
+                }
+            }
+        }
+        .ef3_contact_frame_wrap {
+            flex-wrap: wrap;
+            div:nth-child(1) {
+                width: 100%;
+                margin-bottom: 50px;
+            }
+            div:nth-child(2) {
+                width: 100%;
+                
+            }
+        }
+    }
+}

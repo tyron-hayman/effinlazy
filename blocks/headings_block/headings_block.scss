@@ -1,0 +1,42 @@
+@use "../../assets/css/variables" as v;
+
+.acf-block-preview {
+    width: 100%!important;
+    max-width: 100%!important;
+    .ef3_heading_block {
+        width: 70%;
+        max-width: 70%;
+        margin: auto;
+    }
+}
+
+.ef3_heading_block {
+    margin-bottom: 0px;
+    h1 {
+        font-size: 4vw;
+        font-weight: 400;
+        color: v.$black;
+    }
+    h2 {
+        font-size: 3vw;
+        font-weight: 400;
+        color: v.$black;
+    }
+    h3 {
+        font-size: 2vw;
+        font-weight: 400;
+        color: v.$black;
+    }
+    h4, h5, h6 {
+        font-size: 2rem;
+        font-weight: 400;
+        color: v.$black;
+    }
+    @media (max-width: v.$small) {
+        h1, h2, h3 {
+            font-size: 2rem;
+            font-weight: 400;
+            color: v.$black;
+        }
+    }
+}

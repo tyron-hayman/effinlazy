@@ -1,0 +1,16 @@
+{
+    "name": "acf/video-block",
+    "title": "Video Block",
+    "description": "A video block for the EffinLazy theme.",
+    "style": [ "file:./video_block.css" ],
+    "category": "effinlazy-block-category",
+    "icon": "video-alt3",
+    "keywords": ["video"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "video_block.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}
