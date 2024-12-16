@@ -327,11 +327,17 @@ function getEmailBody($name, $email, $body) {
 
 // Shortcodes
 
-function client_stories_shortcode() {
+function client_stories_shortcode($atts) {
+	$default = array(
+        'title' => 'A title',
+    );
+    $a = shortcode_atts($default, $atts);
+
 	$storyNum = 1;
 	$args = array( 'post_type' => 'testimonials', 'posts_per_page' => -1 );
 	$the_query = new WP_Query( $args );
 	$html = '<div id="client_stories_wrap">';
+	$html .= '<h2>' . $a['title'] . '</h2>';
 	$html .= '<div id="client_stories_inner">';
 	$html .= '<div id="client_stories_scroller">';
 	if ( $the_query->have_posts() ) {

@@ -16,7 +16,9 @@ $block .= '<div class="ef3_deal_block">';
         $block .= '</div>';
         $block .= '<div class="ef3_about_block_content_r">';
             $block .= $ef3_deal_cta['content'];
-            $block .= '<a href="' . $ef3_deal_cta['cta']["link"] . '" class="ef3_buttons">' . $ef3_deal_cta['cta']["link_text"] . '</a>';
+            if ( $ef3_deal_cta['cta']["link"] != "" ) {
+                $block .= '<a href="' . $ef3_deal_cta['cta']["link"] . '" class="ef3_buttons">' . $ef3_deal_cta['cta']["link_text"] . '</a>';
+            }
         $block .= '</div>';
     $block .= '</div>';
 $block .= '</div>';

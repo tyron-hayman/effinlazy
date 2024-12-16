@@ -424,17 +424,17 @@ button:focus {
         font-size: 1.5rem;
         font-weight: 900;
         margin-bottom: 20px;
-        color: v.$white;
+        color: v.$black;
     }
     p {
         font-size: 1.25rem;
         line-height: 2rem;
         margin: 0!important;
-        color: v.$white;
+        color: v.$black;
     }
     a {
         font-weight: 700;
-        color: v.$white;
+        color: v.$gold;
     }
     .footer_icons {
         font-size: 1.5rem;
@@ -450,7 +450,7 @@ button:focus {
             position: sticky;
             top: calc(100vh - 350px);
             height: 350px;
-            background: v.$gold;
+            background: v.$white;
             #siteFooterContentInner {
                 padding: 5%;
                 display: flex;
@@ -610,13 +610,18 @@ button:focus {
 
 .ef-interior-content {
     width: 90%;
-    margin: 200px auto;
+    margin: 0 auto;
 }
 
 // Client Stories 
 #client_stories_wrap {
     width: 90%;
     margin: 200px 0;
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 100px;
+        text-transform: uppercase;
+    }
     #client_stories_inner {
         position: relative;
         #client_stories_scroller {
@@ -636,21 +641,20 @@ button:focus {
                 padding: 40px;
                 transform: rotate(-5deg);
                 -webkit-transform: rotate(-5deg);
-                transition: all 0.5s ease-out;
-                -webkit-transition: all 0.5s ease-out;
+                transition: all 0.5s ease-in-out;
+                -webkit-transition: all 0.5s ease-in-out;
                 &:nth-child(even) {
                     margin-top: 50px;
                     transform: rotate(5deg);
                     -webkit-transform: rotate(5deg);
                 }
-                &:hover {
-                    transform: rotate(0deg);
-                    -webkit-transform: rotate(0deg);
-                }
                 .client_stories_content {
                     align-self: flex-end;
                     display: flex;
                     align-items: center;
+                    border-top: rgba($color: v.$white, $alpha: 0.2) 1px solid;
+                    width: 100%;
+                    padding-top: 30px;
                     .client_stories_content_av {
                         margin-right: 20px;
                         width: 50px;
@@ -658,18 +662,21 @@ button:focus {
                         border-radius: 50%;
                         -webkit-border-radius: 50%;
                         -moz-border-radius: 50%;
+                        overflow: hidden;
                         background-size: cover!important;
                         -webkit-background-size: cover!important;
+                        border: rgba($color: v.$white, $alpha: 1) 3px solid;
                     }
                 }
                 h3 {
                     font-size: 2rem;
-                    color: rgba(255,255,255,0.7);
+                    line-height: 2rem;
+                    color: v.$white
                 }
                 p {
                     font-weight: 600;
-                    font-size: 1.4rem;
-                    color: v.$white;
+                    font-size: 1.5rem;
+                    color: rgba($color: v.$white, $alpha: 0.85);
                 }
             }
         }

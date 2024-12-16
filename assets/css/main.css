@@ -423,17 +423,17 @@ button:focus {
   font-size: 1.5rem;
   font-weight: 900;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: rgb(21, 21, 21);
 }
 #siteFooter p {
   font-size: 1.25rem;
   line-height: 2rem;
   margin: 0 !important;
-  color: #ffffff;
+  color: rgb(21, 21, 21);
 }
 #siteFooter a {
   font-weight: 700;
-  color: #ffffff;
+  color: #FD644B;
 }
 #siteFooter .footer_icons {
   font-size: 1.5rem;
@@ -450,7 +450,7 @@ button:focus {
   position: sticky;
   top: calc(100vh - 350px);
   height: 350px;
-  background: #FD644B;
+  background: #ffffff;
 }
 #siteFooter #siteFooterInner #siteFooterContent #siteFooterContentInner {
   padding: 5%;
@@ -586,12 +586,17 @@ button:focus {
 
 .ef-interior-content {
   width: 90%;
-  margin: 200px auto;
+  margin: 0 auto;
 }
 
 #client_stories_wrap {
   width: 90%;
   margin: 200px 0;
+}
+#client_stories_wrap h2 {
+  font-size: 3rem;
+  margin-bottom: 100px;
+  text-transform: uppercase;
 }
 #client_stories_wrap #client_stories_inner {
   position: relative;
@@ -614,22 +619,21 @@ button:focus {
   padding: 40px;
   transform: rotate(-5deg);
   -webkit-transform: rotate(-5deg);
-  transition: all 0.5s ease-out;
-  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
 }
 #client_stories_wrap #client_stories_inner #client_stories_scroller .client_stories:nth-child(even) {
   margin-top: 50px;
   transform: rotate(5deg);
   -webkit-transform: rotate(5deg);
 }
-#client_stories_wrap #client_stories_inner #client_stories_scroller .client_stories:hover {
-  transform: rotate(0deg);
-  -webkit-transform: rotate(0deg);
-}
 #client_stories_wrap #client_stories_inner #client_stories_scroller .client_stories .client_stories_content {
   align-self: flex-end;
   display: flex;
   align-items: center;
+  border-top: rgba(255, 255, 255, 0.2) 1px solid;
+  width: 100%;
+  padding-top: 30px;
 }
 #client_stories_wrap #client_stories_inner #client_stories_scroller .client_stories .client_stories_content .client_stories_content_av {
   margin-right: 20px;
@@ -638,17 +642,20 @@ button:focus {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
+  overflow: hidden;
   background-size: cover !important;
   -webkit-background-size: cover !important;
+  border: white 3px solid;
 }
 #client_stories_wrap #client_stories_inner #client_stories_scroller .client_stories h3 {
   font-size: 2rem;
-  color: rgba(255, 255, 255, 0.7);
+  line-height: 2rem;
+  color: #ffffff;
 }
 #client_stories_wrap #client_stories_inner #client_stories_scroller .client_stories p {
   font-weight: 600;
-  font-size: 1.4rem;
-  color: #ffffff;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 #blog_page_wrapper_single {

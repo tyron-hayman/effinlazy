@@ -39,7 +39,9 @@ $block .= '<div class="ef3_services_block">';
     $block .= '</div>';
     $block .= '<div class="ef3_service_block_footer">';
         $block .= '<h4>' . $ef3_service_sub_text . '</h4>';
-        $block .= '<a href="' . $ef3_service_cta["link"] . '" class="ef3_buttons">' . $ef3_service_cta["link_text"] . '</a>';
+        if ( $ef3_service_cta["link"] != "" ) {
+            $block .= '<a href="' . $ef3_service_cta["link"] . '" class="ef3_buttons">' . $ef3_service_cta["link_text"] . '</a>';
+        }
     $block .= '</div>';
     $block .= '</div>';
 $block .= '</div>';
