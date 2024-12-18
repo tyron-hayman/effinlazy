@@ -1,8 +1,9 @@
 {
     "name": "acf/about-block",
     "title": "About Block",
-    "description": "A about block for the EffinLazy theme. Tell people about yourself!",
+    "description": "About section for your website!",
     "style": [ "file:./about_block.css" ],
+    "script": ["file:./about_block.js"],
     "category": "effinlazy-block-category",
     "icon": "format-status",
     "keywords": ["about"],

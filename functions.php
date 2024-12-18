@@ -241,11 +241,12 @@ function ef3_register_acf_blocks() {
     register_block_type( __DIR__ . '/blocks/landing_block' );
 	register_block_type( __DIR__ . '/blocks/video_block' );
 	register_block_type( __DIR__ . '/blocks/testimonials_block' );
-	register_block_type( __DIR__ . '/blocks/about_block' );
 	register_block_type( __DIR__ . '/blocks/services_block' );
 	register_block_type( __DIR__ . '/blocks/deal_block' );
 	register_block_type( __DIR__ . '/blocks/contact_block' );
 	register_block_type( __DIR__ . '/blocks/headings_block' );
+	register_block_type( __DIR__ . '/blocks/image_left_block' );
+	register_block_type( __DIR__ . '/blocks/about_block' );
 }
 add_action( 'init', 'ef3_register_acf_blocks' );
 
@@ -254,7 +255,6 @@ add_filter( 'allowed_block_types_all', 'ef_allowed_block_types', 25, 2 );
 function ef_allowed_block_types( $allowed_blocks, $editor_context ) {
  
 	return array(
-		'acf/about-block',
 		'acf/contact-block',
 		'acf/deal-block',
 		'acf/landing-block',
@@ -262,7 +262,9 @@ function ef_allowed_block_types( $allowed_blocks, $editor_context ) {
 		'acf/testimonials-block',
 		'acf/video-block',
 		'acf/headings-block',
-		'core/paragraph'
+		'core/paragraph',
+		'acf/image-left-block-block',
+		'acf/about-block'
 	);
  
 }

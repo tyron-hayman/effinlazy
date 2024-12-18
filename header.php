@@ -26,7 +26,11 @@ $logoImage = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 <div class="mainSiteNav_inner">
     <div class="w-[150px] p-2 animationTargets">
         <a href="<?php echo site_url(); ?>">
+            <?php if ( $logoImage[0] ) { ?>
             <img class="w-full" src="<?php echo $logoImage[0]; ?>" alt="<?php bloginfo("name"); ?>" />
+            <?php } else {
+                echo '<h3>' . get_bloginfo('name') . '</h3>';
+            } ?>
         </a>
     </div>
     <div>

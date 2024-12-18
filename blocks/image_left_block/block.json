@@ -1,0 +1,17 @@
+{
+    "name": "acf/image-left-block-block",
+    "title": "Image Left Block",
+    "description": "Main headings for the pages you create!",
+    "style": [ "file:./image_left_block.css" ],
+    "script": ["file:./image_left_block.js"],
+    "category": "effinlazy-block-category",
+    "icon": "format-status",
+    "keywords": ["2 columns"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "image_left_block.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

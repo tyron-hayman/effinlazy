@@ -55,13 +55,18 @@ body {
 }
 #mainSiteNav .mainSiteNav_inner {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   transition: all 0.5s ease-out;
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
+}
+#mainSiteNav .mainSiteNav_inner h3 {
+  color: rgb(21, 21, 21);
+  font-size: 1.5rem;
+  line-height: 1;
 }
 #mainSiteNav .mainSiteNav_inner .nav {
   display: flex;
@@ -75,6 +80,7 @@ body {
   transition: all 0.35s ease-out;
   -webkit-transition: all 0.35s ease-out;
   -moz-transition: all 0.35s ease-out;
+  font-size: 1.2rem;
 }
 #mainSiteNav .mainSiteNav_inner .nav .global_search_link {
   background: rgb(242, 242, 242);
@@ -112,16 +118,9 @@ body {
   width: 100%;
 }
 #mainSiteNav.scrolled {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  -moz-backdrop-filter: blur(4px);
-}
-#mainSiteNav.scrolled .mainSiteNav_inner {
-  padding: 0.5rem 2rem;
-}
-#mainSiteNav.scrolled li {
-  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 #mainSiteNav .showOnMobile {
   display: none;
@@ -418,6 +417,12 @@ button:focus {
 #siteFooter img {
   max-width: 100%;
   height: auto;
+}
+#siteFooter h3 {
+  color: rgb(21, 21, 21);
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 10px;
 }
 #siteFooter h4 {
   font-size: 1.5rem;

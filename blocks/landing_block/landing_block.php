@@ -10,6 +10,7 @@ $landing_sub_heading = get_field( 'landing_sub_heading' );
 $landing_image_right = get_field( 'landing_image_right' );
 $landing_image_left = get_field( 'landing_image_left' );
 $ef3_landing_cta = get_field( 'ef3_landing_cta' );
+$ef3_landing_quotes = get_field('ef3_landing_quotes');
 $block = '';
 $headingArr = explode(" ", $landing_main_heading);
 
@@ -25,7 +26,15 @@ $block .= '<div class="ef3_landing_block">';
             $block .= '<a href="' . $ef3_landing_cta["link"] . '" class="ef3_buttons">' . $ef3_landing_cta["link_text"] . '</a>';
             $block .= '</div>';
         $block .= '</div>';
-        $block .= '<div class="ef3_landing_block_image_right"><div style="background : url(' . $landing_image_right . ') center center no-repeat"></div></div>';
+        $block .= '<div class="ef3_landing_block_image_right"><div class="ef3_landing_block_image" style="background : url(' . $landing_image_right . ') center center no-repeat">';
+            if ( $ef3_landing_quotes ) {
+                $block .= '<div class="ef3_landing_quote_wrap"><div class="ef3_landing_quotes">';
+                foreach($ef3_landing_quotes as $quote) {
+                    $block .= '<p class="ef3_landing_quote">"' . $quote['quote'] . '"</p>';
+                }
+                $block .= '</div></div>';
+            }
+        $block .= '</div></div>';
 $block .= '</div>';
 
 echo $block;

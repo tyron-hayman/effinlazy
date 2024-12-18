@@ -57,13 +57,18 @@ body {
     }
     .mainSiteNav_inner {
         width: 100%;
-        padding: 1rem 2rem;
+        padding: 0.5rem 2rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
         transition: all 0.5s ease-out;
         -webkit-transition: all 0.5s ease-out;
         -moz-transition: all 0.5s ease-out;
+        h3 {
+            color: v.$black;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
         .nav {
             display: flex;
             align-items: center;
@@ -75,6 +80,7 @@ body {
                 transition: all 0.35s ease-out;
                     -webkit-transition: all 0.35s ease-out;
                     -moz-transition: all 0.35s ease-out;
+                    font-size: 1.2rem;
             }
             .global_search_link {
                 background: v.$lightgray;
@@ -116,16 +122,9 @@ body {
         }
     }
     &.scrolled {
-        background: rgba(255,255,255,0.85);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
-        -moz-backdrop-filter: blur(4px);
-        .mainSiteNav_inner {
-            padding: 0.5rem 2rem;
-        }
-        li {
-            font-size: 1rem;
-        }
+        background: rgba(255,255,255,0.5);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
     }
     .showOnMobile {
         display: none;
@@ -419,6 +418,12 @@ button:focus {
     img {
         max-width: 100%;
         height: auto;
+    }
+    h3 {
+        color: v.$black;
+        font-size: 1.5rem;
+        line-height: 1;
+        margin-bottom: 10px;
     }
     h4{
         font-size: 1.5rem;

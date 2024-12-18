@@ -23,7 +23,11 @@ $footerLinks = $footercontent['quick_links'];
         <div id="siteFooterContent">
             <div id="siteFooterContentInner">
                 <div>
-                    <img src="<?php echo $logoImage[0]; ?>" alt="<?php bloginfo("name"); ?>" />
+                    <?php if ( $logoImage[0] ) { ?>
+                        <img class="w-full" src="<?php echo $logoImage[0]; ?>" alt="<?php bloginfo("name"); ?>" />
+                    <?php } else {
+                        echo '<h3>' . get_bloginfo('name') . '</h3>';
+                    } ?>
                     <p>Email: <?php echo $footercontent['email']; ?></p>
                     <p>Phone: <?php echo $footercontent['phone']; ?></p>
                 </div>

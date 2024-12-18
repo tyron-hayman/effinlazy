@@ -3,6 +3,7 @@
     "title": "Landing Block",
     "description": "A landing block for the EffinLazy theme.",
     "style": [ "file:./landing_block.css" ],
+    "script": ["file:./landing_block.js"],
     "category": "effinlazy-block-category",
     "icon": "embed-generic",
     "keywords": ["landing"],

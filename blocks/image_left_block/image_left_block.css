@@ -1,0 +1,73 @@
+.acf-block-preview {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.acf-block-preview .ef3_image_left_block_image div {
+  display: none;
+}
+
+.ef3_image_left_block {
+  background: #ffffff;
+  padding: 200px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.ef3_image_left_block .ef3_image_left_block_content {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.ef3_image_left_block .ef3_image_left_block_content h2 {
+  width: 100%;
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 0 auto 100px auto;
+  text-align: center;
+}
+.ef3_image_left_block .ef3_image_left_block_content ul {
+  margin-bottom: 20px;
+}
+.ef3_image_left_block .ef3_image_left_block_content ul li {
+  list-style: circle;
+}
+.ef3_image_left_block .ef3_image_left_block_content .ef3_image_left_block_left {
+  width: 45%;
+}
+.ef3_image_left_block .ef3_image_left_block_content .ef3_image_left_block_left .ef3_image_left_block_image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  overflow: hidden;
+  position: relative;
+}
+.ef3_image_left_block .ef3_image_left_block_content .ef3_image_left_block_left .ef3_image_left_block_image div {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 1;
+}
+.ef3_image_left_block .ef3_image_left_block_content .ef3_image_left_block_right {
+  width: 45%;
+}
+.ef3_image_left_block .ef3_ef3_image_left_block_btn {
+  text-align: center;
+  margin: 100px 0 0 0;
+}
+@media (max-width: 980px) {
+  .ef3_image_left_block .ef3_image_left_block_content {
+    width: 90%;
+  }
+  .ef3_image_left_block .ef3_image_left_block_content .ef3_image_left_block_left, .ef3_image_left_block .ef3_image_left_block_content .ef3_image_left_block_right {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}/*# sourceMappingURL=image_left_block.css.map */
