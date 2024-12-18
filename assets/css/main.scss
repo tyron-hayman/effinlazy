@@ -216,6 +216,19 @@ p, li {
     margin-bottom: 20px;
 }
 
+#primary_wrapper {
+    ul {
+        li {
+            list-style: circle;
+        }
+    }
+    ol {
+        li {
+            list-style: decimal;
+        }
+    }
+}
+
 @media (max-width: v.$small) {
     p, li {
         font-size: 1rem;
@@ -223,9 +236,10 @@ p, li {
     }
 }
 
-ul {
-    margin: 0 0 0 20px;
+ul, ol {
+    margin: 0 0 0 30px;
 }
+
 li {
     margin: 0;
     padding: 0 0 0 5px;
@@ -432,8 +446,8 @@ button:focus {
         color: v.$black;
     }
     p {
-        font-size: 1.25rem;
-        line-height: 2rem;
+        font-size: 1.1rem;
+        line-height: 1.7rem;
         margin: 0!important;
         color: v.$black;
     }

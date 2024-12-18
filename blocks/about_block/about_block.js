@@ -7,10 +7,10 @@ window.addEventListener("load", () => {
             scrollTrigger: {
                 trigger: wrapper[0],
                 start: 'top top',
-                end : '+=600px',
+                end : '+=800px',
                 scrub: 1,
             },
-            opacity : 0, filter: 'blur(4px)'
+            opacity : 0, filter: 'blur(4px)', scale: 0.9, y: 50
         }
     );
     gsap.to(theImage[0],

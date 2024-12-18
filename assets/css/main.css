@@ -211,14 +211,21 @@ p, li {
   margin-bottom: 20px;
 }
 
+#primary_wrapper ul li {
+  list-style: circle;
+}
+#primary_wrapper ol li {
+  list-style: decimal;
+}
+
 @media (max-width: 980px) {
   p, li {
     font-size: 1rem;
     line-height: 2rem;
   }
 }
-ul {
-  margin: 0 0 0 20px;
+ul, ol {
+  margin: 0 0 0 30px;
 }
 
 li {
@@ -431,8 +438,8 @@ button:focus {
   color: rgb(21, 21, 21);
 }
 #siteFooter p {
-  font-size: 1.25rem;
-  line-height: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
   margin: 0 !important;
   color: rgb(21, 21, 21);
 }

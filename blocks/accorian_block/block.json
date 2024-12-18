@@ -1,0 +1,17 @@
+{
+    "name": "acf/accordian-block",
+    "title": "Accordion Block",
+    "description": "Display content in an accordion style block!",
+    "style": [ "file:./accorian_block.css" ],
+    "script": ["file:./accorian_block.js"],
+    "category": "effinlazy-block-category",
+    "icon": "format-status",
+    "keywords": ["Accordion"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "accorian_block.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

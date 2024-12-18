@@ -1,0 +1,17 @@
+{
+    "name": "acf/box-block",
+    "title": "Box Block",
+    "description": "Boxes for paralax content!",
+    "style": [ "file:./box_block.css" ],
+    "script": ["file:./box_block.js"],
+    "category": "effinlazy-block-category",
+    "icon": "format-status",
+    "keywords": ["boxes", "content"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "box_block.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}
