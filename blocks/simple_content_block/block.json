@@ -1,0 +1,17 @@
+{
+    "name": "acf/simple-content-block",
+    "title": "Simple Conent Block",
+    "description": "Boxes for paralax content!",
+    "style": [ "file:./simple_content_block.css" ],
+    "script": ["file:./simple_content_block.js"],
+    "category": "effinlazy-block-category",
+    "icon": "format-status",
+    "keywords": ["simple", "content"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "simple_content_block.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

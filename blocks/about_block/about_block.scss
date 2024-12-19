@@ -19,9 +19,7 @@
         width: 350px;
         height: 350px;
         margin: 0 auto 100px auto;
-        transform: scale(0.85);
-        -webkit-transform: scale(0.85);
-        div, &:before {
+        div {
             position: absolute;
             left: 0;
             bottom: 0;
@@ -30,15 +28,15 @@
             border-radius: 25px;
             -webkit-border-radius: 25px;
             overflow: hidden;
+            display: block;
         }
-        &:before {
+        .ef3_about_block_image_box {
             z-index: 1;
-            content: "\00a0";
             transform: translateX(30px) translateY(30px);
             -webkit-transform: translateX(30px) translateY(30px);
             background: v.$gold;
         }
-        div {
+        .ef3_about_block_image_bg {
             background-size: cover!important;
             -webkit-background-size: cover!important;
             z-index: 2;

@@ -1,0 +1,35 @@
+.acf-block-preview {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.acf-block-preview .ef3_heading_block {
+  width: 70%;
+  max-width: 70%;
+  margin: auto;
+}
+
+.ef3_simple_content_block {
+  width: 80%;
+  margin: 100px auto;
+  background: rgb(21, 21, 21);
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+}
+.ef3_simple_content_block .ef3_simple_content_block_content {
+  padding: 100px;
+}
+.ef3_simple_content_block .ef3_simple_content_block_content h2 {
+  color: #ffffff;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.ef3_simple_content_block .ef3_simple_content_block_content p, .ef3_simple_content_block .ef3_simple_content_block_content li {
+  color: rgba(255, 255, 255, 0.7);
+}
+.ef3_simple_content_block .ef3_simple_content_block_content .ef3_buttons {
+  display: inline-block;
+  margin-top: 30px;
+}/*# sourceMappingURL=simple_content_block.css.map */

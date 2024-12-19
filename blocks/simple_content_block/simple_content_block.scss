@@ -1,0 +1,39 @@
+@use "../../assets/css/variables" as v;
+
+.acf-block-preview {
+    width: 100%!important;
+    max-width: 100%!important;
+    .ef3_heading_block {
+        width: 70%;
+        max-width: 70%;
+        margin: auto;
+    }
+}
+
+.ef3_simple_content_block {
+    width: 80%;
+    margin: 100px auto;
+    background: v.$black;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    .ef3_simple_content_block_content {
+        padding: 100px;
+        h2 {
+            color: v.$white;
+            font-size: 3.5rem;
+            line-height: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+        p, li {
+            color: rgba($color: v.$white, $alpha: 0.7);
+        }
+        .ef3_buttons {
+            display: inline-block;
+            margin-top: 30px;
+        }
+    }
+    @media (max-width: v.$small) {
+    }
+}
