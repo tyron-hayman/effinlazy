@@ -246,9 +246,11 @@ function ef3_register_acf_blocks() {
 	register_block_type( __DIR__ . '/blocks/contact_block' );
 	register_block_type( __DIR__ . '/blocks/headings_block' );
 	register_block_type( __DIR__ . '/blocks/image_left_block' );
+	register_block_type( __DIR__ . '/blocks/image_right_block' );
 	register_block_type( __DIR__ . '/blocks/about_block' );
 	register_block_type( __DIR__ . '/blocks/simple_content_block' );
 	register_block_type( __DIR__ . '/blocks/accorian_block' );
+	register_block_type( __DIR__ . '/blocks/boxcontent_block' );
 }
 add_action( 'init', 'ef3_register_acf_blocks' );
 
@@ -268,7 +270,9 @@ function ef_allowed_block_types( $allowed_blocks, $editor_context ) {
 		'acf/image-left-block-block',
 		'acf/about-block',
 		'acf/simple-content-block',
-		'acf/accordian-block'
+		'acf/accordian-block',
+		'acf/image-right-block-block',
+		'acf/boxcontent-block'
 	);
  
 }

@@ -1,0 +1,17 @@
+{
+    "name": "acf/image-right-block-block",
+    "title": "Image Right Block",
+    "description": "Block with image on the right of content!",
+    "style": [ "file:./image_right_block.css" ],
+    "script": ["file:./image_right_block.js"],
+    "category": "effinlazy-block-category",
+    "icon": "format-status",
+    "keywords": ["2 columns"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "image_right_block.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

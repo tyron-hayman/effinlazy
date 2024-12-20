@@ -174,29 +174,13 @@
     const init = () => {
         const siteLoader = $('#siteLoader');
         if ( siteLoader.length > 0 ) {
-            const loaderAni = gsap.to("#siteLoader p",
-                { 
-                    width : '100%',
-                    duration : 2,
-                    onUpdate: () => {
-                        let curr = Math.round((loaderAni.time() / 2 ) * 100 );
-                        $('#siteLoader p span').html(curr);
-                    },
-                    onComplete : () => {
-                        gsap.to("#siteLoader",
-                            { 
-                                height : 0,
-                                duration : 0.5,
-                                onComplete : () => {
-                                    siteLoader.fadeOut(0.2, () => {
-                                        loadAnimations();
-                                    })
-                                }
-                            }
-                        );
-                    }
-                }
-            );
+            var tl = new TimelineLite();
+            tl.to(".tp4", 3, {strokeDashoffset:"0"});
+            tl.to(".tp4", 0.2, {fillOpacity:1}, "-=1.5");
+            tl.to(siteLoader, 0.5, { opacity: 0, onComplete: () => {
+                siteLoader.css({ display : 'none' });
+                loadAnimations();
+            }})
         } else {
             loadAnimations();
         }

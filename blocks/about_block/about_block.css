@@ -4,6 +4,7 @@
 }
 .acf-block-preview .ef3_about_block_content h2 {
   position: relative !important;
+  top: 0 !important;
 }
 
 .ef3_about_block {

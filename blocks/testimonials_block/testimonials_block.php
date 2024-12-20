@@ -37,7 +37,15 @@ $block .= '<div class="ef3_testimonials_block">';
                         $block .= '</div>';
                         $block .= '<div class="ef3_testimonials_block_testimonials_author">';
                             $block .= '<div class="ef3_testimonials_block_testimonials_avatar" style="background: url(' . $bgImage . ') center center no-repeat"></div>';
-                            $block .= '<h5>' . get_the_title() . '</h5>';
+
+                            $words = explode(" ", get_the_title());
+                            $acronym = "";
+
+                            foreach ($words as $w) {
+                            $acronym .= mb_substr($w, 0, 1);
+}
+
+                            $block .= '<h5>' . $acronym . '</h5>';
                         $block .= '</div>';
                         $block .= '</div>';
                         $avNum++;

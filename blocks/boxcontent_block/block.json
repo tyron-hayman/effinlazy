@@ -1,0 +1,16 @@
+{
+    "name": "acf/boxcontent-block",
+    "title": "Box Content Block",
+    "style": [ "file:./boxcontent_block.css" ],
+    "script": ["file:./boxcontent_block.js"],
+    "category": "effinlazy-block-category",
+    "icon": "format-status",
+    "keywords": ["about"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "boxcontent_block.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

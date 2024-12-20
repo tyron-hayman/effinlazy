@@ -1,7 +1,7 @@
 {
     "name": "acf/image-left-block-block",
     "title": "Image Left Block",
-    "description": "Main headings for the pages you create!",
+    "description": "Block with image on the left of content!",
     "style": [ "file:./image_left_block.css" ],
     "script": ["file:./image_left_block.js"],
     "category": "effinlazy-block-category",

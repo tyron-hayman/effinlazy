@@ -70,7 +70,22 @@ $logoImage = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 
 <?php if ( is_front_page() ) { ?>
 <div id="siteLoader">
-    <p><span>0</span>%</p>
+    <div class="siteLoaderText">
+        <svg class="text">
+            <text class="texto" x="0" y="70px" fill="#fff" stroke="#fff" stroke-width="2" font-size="48px">
+            <tspan class="tp tp4">S</tspan>
+            <tspan class="tp tp4" dx="-10px">I</tspan>
+            <tspan class="tp tp4" dx="-10px">D</tspan>
+            <tspan class="tp tp4" dx="-10px">S</tspan>
+            <tspan class="tp tp4" dx="-10px">A</tspan>
+            <tspan class="tp tp4" dx="-10px">R</tspan>
+            <tspan class="tp tp4" dx="-10px">A</tspan>
+            <tspan class="tp tp4" dx="-10px">I</tspan>
+            <tspan class="tp tp4" dx="-10px">Y</tspan>
+            <tspan class="tp tp4" dx="-10px">A</tspan>
+            </text>
+        </svg>
+    </div>
 </div>
 <?php } ?>
 

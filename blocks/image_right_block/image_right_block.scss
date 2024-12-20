@@ -3,20 +3,20 @@
 .acf-block-preview {
     width: 100%!important;
     max-width: 100%!important;
-    .ef3_image_left_block_image {
+    .ef3_image_right_block_image {
         div {
             display: none;
         }
     }
 }
 
-.ef3_image_left_block {
+.ef3_image_right_block {
     background: v.$white;
     padding: 200px 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    .ef3_image_left_block_content {
+    .ef3_image_right_block_content {
         width: 80%;
         display: flex;
         flex-wrap: wrap;
@@ -35,9 +35,9 @@
                 list-style: circle;
             }
         }
-        .ef3_image_left_block_left {
+        .ef3_image_right_block_right {
             width: 45%;
-            .ef3_image_left_block_image {
+            .ef3_image_right_block_image {
                 width: 100%;
                 aspect-ratio: 1 / 1;
                 border-radius: 25px;
@@ -57,18 +57,18 @@
                 }
             }
         }
-        .ef3_image_left_block_right {
+        .ef3_image_right_block_left {
             width: 50%;
         }
     }
-    .ef3_ef3_image_left_block_btn {
+    .ef3_ef3_image_right_block_btn {
         text-align: center;
         margin: 100px 0 0 0
     }
     @media (max-width: v.$small) {
-        .ef3_image_left_block_content {
+        .ef3_image_right_block_content {
             width: 90%;
-            .ef3_image_left_block_left, .ef3_image_left_block_right {
+            .ef3_image_right_block_right, .ef3_image_right_block_left {
                 width: 100%;
                 margin-bottom: 50px;
             }

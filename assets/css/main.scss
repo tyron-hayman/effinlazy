@@ -187,6 +187,7 @@ body {
 }
 
 .ef3_buttons {
+    display: inline-block;
     background: v.$gold;
     border-radius: 9999px;
     -webkit-border-radius: 9999px;
@@ -408,23 +409,50 @@ button:focus {
     display: flex;
     justify-content: start;
     background: v.$black;
-    p {
-        position: absolute;
-        display: block;
-        z-index: 1;
-        left: 0;
-        bottom: 0;
-        padding: 30px 0;
-        margin: 0;
-        color: v.$white;
-        font-size: 2rem;
-        text-align: right;
-        border-bottom: v.$gold 2px solid;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .tp {
+        stroke-dasharray: 200;
+        stroke-dashoffset: 200;
+        fill-opacity: 0;
+      }
 }
 
 
   // Footer
+#global_cta_footer {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    background: v.$gold;
+    #global_cta_footer_content {
+        width: 60%;
+        text-align: center;
+        h1, h2, h3, h4, h5, h6 {
+            color: v.$white;
+            margin-bottom: 20px;
+        }
+        p, li {
+            color: rgba($color: v.$white, $alpha: 0.7);
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .ef3_buttons {
+            display: inline-block;
+            background: v.$black;
+            &:hover {
+                background: v.$white;
+                color: v.$black;
+            }
+        }
+        @media (max-width: v.$small) {
+            width: 90%;
+        }
+    }
+}
+
   #siteFooter {
     position:  relative;
     height: 350px;
@@ -437,9 +465,10 @@ button:focus {
     }
     h3 {
         color: v.$black;
-        font-size: 1.5rem;
+        font-size: 2rem;
+        font-weight: 900;
         line-height: 1;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     h4{
         font-size: 1.5rem;
@@ -448,17 +477,16 @@ button:focus {
         color: v.$black;
     }
     p {
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 1.7rem;
         margin: 0!important;
         color: v.$black;
     }
     a {
-        font-weight: 700;
+        font-size: 1rem;
         color: v.$gold;
     }
     .footer_icons {
-        font-size: 1.5rem;
         display: inline-block;
         margin: 0 20px 0 0;
     }
@@ -473,13 +501,15 @@ button:focus {
             height: 350px;
             background: v.$white;
             #siteFooterContentInner {
-                padding: 5%;
+                padding: 5% 0;
+                width: 80%;
+                margin: 0 auto;
                 display: flex;
                 justify-content: space-between;
                 align-items: start;
                 flex-wrap: wrap;
-                div {
-                    width: 20%;
+                div:nth-child(2) {
+                    width: 40%;
                 }
                 #footer_quick_links {
                     a {
@@ -489,13 +519,10 @@ button:focus {
                     }
                 }
                 #footer_copy {
+                    border-top: rgba($color: v.$black, $alpha: 0.1) 1px solid;
                     width: 100%;
-                    padding: 20px 0 0 0;
-                    margin: 20px 0 0 0;
-                    border-top: rgba(255,255,255,0.2) 1px solid;
-                    p {
-                        font-size: 0.9rem;
-                    }
+                    padding: 30px 0 0 0;
+                    margin: 30px 0 0 0;
                 }
             }
         }
@@ -508,8 +535,9 @@ button:focus {
                 top: calc(100vh - 650px);
                 height: 650px;
                 #siteFooterContentInner {
+                    width: 90%;
                     div {
-                        width: 100%;
+                        width: 100%!important;
                         margin-bottom: 30px;
                     }
                 }
