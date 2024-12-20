@@ -9,131 +9,146 @@
     @include v.globalButton(1);
 }
 .ef3_landing_block {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-    .ef3_landing_block_content {
-        width: 50%;
-        z-index: 2;
+    .ef3_landing_block_inner {
+        height: 100vh;
         display: flex;
         align-items: center;
+    }
+    .ef3_landing_block_content {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .ef3_landing_block_content_left {
+            width: 60%;
+        }
+        .ef3_landing_block_content_right {
+            width: 30%;
+        }
         h2 {
-            font-size: 5vw;
-            line-height: 5vw;
-            font-weight: 900;
+            font-size: 6rem;
+            line-height: 6rem;
+            font-weight: 600;
             text-transform: uppercase;
             margin-bottom: 20px;
             color: v.$black;
-            span {
-                display: inline-block;
-                padding-right: 1rem;
-                opacity: 0;
-            }
         }
         h3 {
-            font-size: 1.5rem;
-            line-height: 2.5rem;
+            font-size: 2.5rem;
+            line-height: 3rem;
             font-weight: 400;
             color: v.$darkgray;
-            opacity: 0;
         }
         a {
             display: inline-block;
             margin-top: 40px;
-            opacity: 0;
+            font-size: 1.5rem;
         }
-    }
-    .ef3_landing_block_image_right {
-        position: relative;
-        width: 35%;
-        height: 70vh;
-        opacity: 0;
-        .ef3_landing_block_image {
-            background-size: cover!important;
-            -webkit-background-size: cover!important;
-            -moz-background-size: cover!important;
-            position: absolute;
-            left: 0;
-            bottom: 0%;
-            right: 0;
-            top: 0%;
-            z-index: 2;
-            border-radius: 25px;
-            -webkit-border-radius: 25px;
-            -moz-border-radius: 25px;
-        }
-        .ef3_landing_quote_wrap {
-            position: absolute;
-            left: -45%;
-            top: 10%;
-            width: 300px;
-            z-index: 3;
-            .ef3_landing_quotes {
+        .ef3_landing_image {
+            position: relative;
+            div {
                 position: relative;
-                p {
-                    display: block;
-                    border-radius: 25px;
-                    -webkit-border-radius: 25px;
-                    backdrop-filter: blur(10px);
-                    -webkit-backdrop-filter: blur(10px);
-                    background: rgba(255,255,255,0.5);
-                    box-shadow: rgba(0,0,0,0.1) 0px 0px 11px;
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    color: v.$black;
-                    font-size: 1rem;
-                    line-height: 1.5rem;
-                    font-weight: 600;
-                    opacity: 0;
-                    margin: 0;
-                    padding: 30px;
-                    transition: all 0.5s;
-                    -webkit-transition: all 0.5s;
-                    &.active {
-                        opacity: 1;
-                    }
+                z-index: 3;
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                display: block;
+                border-radius: 25px;
+                -webkit-border-radius: 25px;
+                background-size: cover!important;
+                -webkit-background-size: cover!important;
+            }
+            .ef3_landing_boxes {
+                border-radius: 25px;
+                -webkit-border-radius: 25px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                content: "\00a0";
+            }
+            .ef3_landing_boxes {
+                &.box1 {
+                    background: v.$gold;
+                    transform: translateX(80px) translatey(80px);
+                    -webkit-transform: translateX(80px) translatey(80px);
+                    z-index: 2;
+                }
+                &.box2 {
+                    background: v.$black;
+                    transform: translateX(-80px) translatey(-80px);
+                    -webkit-transform: translateX(-80px) translatey(-80px);
+                    z-index: 1;
                 }
             }
-            @media (max-width: v.$small) {
-                width: 100%;
-                left: -10%;
-                top: 70%;
-                p {
-                    padding: 20px!important;
-                }
+        }
+    }
+    .ef3_quotes_wrap {
+        position: absolute;
+        right: 40%;
+        bottom: 36%;
+        z-index: 10;
+        .ef3_quotes_item {
+            width: 500px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 25px;
+            -webkit-border-radius: 25px;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            background: rgba($color: v.$white, $alpha: 0.8);
+            p {
+                font-size: 1.1rem;
+                line-height: 1.5rem;
+                font-weight: 300;
+                margin: 0;
+                padding: 30px;
             }
         }
     }
     @media (max-width: v.$small) {
-        width: 90%;
-        height: auto;
-        padding-top: 50px;
-        padding-bottom: 100px;
-        flex-wrap: wrap;
-        justify-content: start;
+        overflow: hidden;
+        padding: 100px 0;
+        .ef3_landing_block_inner {
+            height: auto;
+            display: block;
+        }
         .ef3_landing_block_content {
-            width: 100%;
-            order: 2;
+            width: 90%;
+            display: block;
+            .ef3_landing_block_content_left {
+                width: 100%;
+            }
+            .ef3_landing_block_content_right {
+                width: 100%;
+                margin-top: 160px;
+            }
             h2 {
-                font-size: 9vw;
-                line-height: 9vw;
+                font-size: 4rem;
+                line-height: 4rem;
+            }
+            h3 {
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+            a {
+                font-size: 1rem;
             }
         }
-        .ef3_landing_block_image_right {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1 / 1;
-            order: 1;
-            margin-bottom: 50px;
-            div {
-                left: 10%;
+        .ef3_quotes_wrap {
+            right: inherit;
+            left: 5%;
+            bottom: 15%;
+            .ef3_quotes_item {
+                width: 350px;
+                p {
+                    padding: 20px;
+                }
             }
         }
     }

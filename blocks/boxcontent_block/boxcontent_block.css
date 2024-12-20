@@ -43,6 +43,7 @@
 @media (max-width: 980px) {
   .ef3_box_content_block .ef3_box_content_block_content .ef3_box_content_box {
     width: 100% !important;
+    padding: 20px;
   }
   .ef3_box_content_block .ef3_box_content_block_cta {
     width: 90%;

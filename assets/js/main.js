@@ -197,36 +197,6 @@
         gsap.registerPlugin(ScrollTrigger);
         gsap.registerPlugin(Draggable);
         gsap.to('#mainSiteNav .animationTargets', { y : 0, opacity : 1, filter : "blur(0px)", stagger : 0.1 });
-        // Landing
-        if ( $('.ef3_landing_block').length > 0 ) {
-            gsap.to('.ef3_landing_block_image_right',
-                { 
-                    scrollTrigger: {
-                        trigger: '.ef3_landing_block',
-                        start: '-100px top',
-                    },
-                    opacity : 1, scale : 1, duration : 1
-                }
-            );
-            gsap.to('.ef3_landing_block h2 span',
-                { 
-                    scrollTrigger: {
-                        trigger: '.ef3_landing_block',
-                        start: '-100px top',
-                    },
-                    opacity : 1, duration : 1, delay : 0.5, stagger : 0.2
-                }
-            );
-            gsap.to('.ef3_landing_block h3, .ef3_landing_block .ef3_buttons',
-                { 
-                    scrollTrigger: {
-                        trigger: '.ef3_landing_block',
-                        start: '-100px top',
-                    },
-                    opacity : 1, duration : 1, delay : 1.5
-                }
-            );
-        }
         // Video block
         if ( $('.ef3_video_block').length > 0 ) {
             gsap.utils.toArray(".ef3_video_block .ef3_video_block_bg").forEach(section => {
