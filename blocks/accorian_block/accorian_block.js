@@ -1,7 +1,9 @@
 window.addEventListener("load", (event) => {
     let ef3_accordion_item = document.getElementsByClassName('ef3_accordion_item');
-    for(let i = 0; i < ef3_accordion_item.length; i++) {
-        addItemListener(ef3_accordion_item[i], i)
+    if ( ef3_accordion_item.length > 0 ) {
+        for(let i = 0; i < ef3_accordion_item.length; i++) {
+            addItemListener(ef3_accordion_item[i], i)
+        }
     }
 });
 

@@ -98,7 +98,7 @@ body {
             .nav-items {
                 position: relative;
                 display: block;
-                font-weight: 400;
+                font-weight: 600;
                 color: v.$black;
                 padding: 4px 20px;
                 &:after {
@@ -122,9 +122,9 @@ body {
         }
     }
     &.scrolled {
-        background: rgba(255,255,255,0.5);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
     }
     .showOnMobile {
         display: none;
@@ -565,6 +565,7 @@ button:focus {
                 gap: 10px;
                 flex-wrap: wrap;
                 li {
+                    list-style: none;
                     a {
                         display: block;
                         border-radius: 9999px;
@@ -657,80 +658,45 @@ button:focus {
 
 // Interior content
 
-.ef-interior-content {
+#testimonials_single {
     width: 90%;
-    margin: 0 auto;
-}
-
-// Client Stories 
-#client_stories_wrap {
-    width: 90%;
-    margin: 200px 0;
-    h2 {
-        font-size: 3rem;
-        margin-bottom: 100px;
-        text-transform: uppercase;
+    margin: 150px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    align-items: flex-start;
+    h1 {
+        font-size: 5rem;
+        line-height: 1;
     }
-    #client_stories_inner {
-        position: relative;
-        #client_stories_scroller {
-            position: sticky;
-            top: 20vh;
-            display: flex;
-            gap: 100px;
-            .client_stories {
-                display: flex;
-                flex-wrap: wrap;
-                width: 600px;
-                height: 600px;
-                background: v.$gold;
-                border-radius: 25px;
-                -webkit-border-radius: 25px;
-                -moz-border-radius: 25px;
-                padding: 40px;
-                transform: rotate(-5deg);
-                -webkit-transform: rotate(-5deg);
-                transition: all 0.5s ease-in-out;
-                -webkit-transition: all 0.5s ease-in-out;
-                &:nth-child(even) {
-                    margin-top: 50px;
-                    transform: rotate(5deg);
-                    -webkit-transform: rotate(5deg);
-                }
-                .client_stories_content {
-                    align-self: flex-end;
-                    display: flex;
-                    align-items: center;
-                    border-top: rgba($color: v.$white, $alpha: 0.2) 1px solid;
-                    width: 100%;
-                    padding-top: 30px;
-                    .client_stories_content_av {
-                        margin-right: 20px;
-                        width: 50px;
-                        height: 50px;
-                        border-radius: 50%;
-                        -webkit-border-radius: 50%;
-                        -moz-border-radius: 50%;
-                        overflow: hidden;
-                        background-size: cover!important;
-                        -webkit-background-size: cover!important;
-                        border: rgba($color: v.$white, $alpha: 1) 3px solid;
-                    }
-                }
-                h3 {
-                    font-size: 2rem;
-                    line-height: 2rem;
-                    color: v.$white
-                }
-                p {
-                    font-weight: 600;
-                    font-size: 1.5rem;
-                    color: rgba($color: v.$white, $alpha: 0.85);
-                }
-            }
+    h2 {
+        margin-bottom: 20px;
+    }
+    #testimonials_single_sidebar {
+        width: 20%;
+        position: sticky;
+        top: 100px;
+    }
+    #testimonials_single_main_content {
+        width: 70%;
+        margin-top: 80px;
+    }
+    .testimonials_single_main_content_section {
+        margin-bottom: 80px;
+        opacity: 0.4;
+    }
+    @media (max-width: v.$small) {
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 60px;
+        }
+        #testimonials_single_sidebar, #testimonials_single_main_content {
+            width: 100%;
         }
     }
 }
+
  // Blog single page
  #blog_page_wrapper_single {
     width: 90%;

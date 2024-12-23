@@ -251,6 +251,7 @@ function ef3_register_acf_blocks() {
 	register_block_type( __DIR__ . '/blocks/simple_content_block' );
 	register_block_type( __DIR__ . '/blocks/accorian_block' );
 	register_block_type( __DIR__ . '/blocks/boxcontent_block' );
+	register_block_type( __DIR__ . '/blocks/stories_block' );
 }
 add_action( 'init', 'ef3_register_acf_blocks' );
 
@@ -272,7 +273,8 @@ function ef_allowed_block_types( $allowed_blocks, $editor_context ) {
 		'acf/simple-content-block',
 		'acf/accordian-block',
 		'acf/image-right-block-block',
-		'acf/boxcontent-block'
+		'acf/boxcontent-block',
+		'acf/stories-block'
 	);
  
 }
@@ -334,48 +336,4 @@ function getEmailBody($name, $email, $body) {
 
 	return $template;
 }
-
-// Shortcodes
-
-function client_stories_shortcode($atts) {
-	$default = array(
-        'title' => 'A title',
-    );
-    $a = shortcode_atts($default, $atts);
-
-	$storyNum = 1;
-	$args = array( 'post_type' => 'testimonials', 'posts_per_page' => -1 );
-	$the_query = new WP_Query( $args );
-	$html = '<div id="client_stories_wrap">';
-	$html .= '<h2>' . $a['title'] . '</h2>';
-	$html .= '<div id="client_stories_inner">';
-	$html .= '<div id="client_stories_scroller">';
-	if ( $the_query->have_posts() ) {
-		while ( $the_query->have_posts() ) : $the_query->the_post();
-
-			$bgImage = get_template_directory_uri() . '/assets/images/avatar.png';
-			if ( has_post_thumbnail( get_the_ID() ) ) {
-				$bgImage = get_the_post_thumbnail( get_the_ID(), 'full' );
-			}
-
-			$html .= '<div class="client_stories">';
-					$html .= get_field('content', get_the_ID());
-					$html .= '<div class="client_stories_content">';
-					$html .= '<div class="client_stories_content_av" style="background: url(' . $bgImage . ') center center no-repeat"></div>';
-						$html .= '<h3>' . get_the_title() . '</h3>';
-					$html .= '</div>';
-			$html .= '</div>';
-			$storyNum++;
-		endwhile;
-	wp_reset_postdata();
-	} else {
-		$html .= '<p>There have been no testimonials added to the website.';
-	}
-	$html .= '</div>';
-	$html .= '</div>';
-	$html .= '</div>';
-    
-    return $html;
-}
-add_shortcode('client_stories', 'client_stories_shortcode');
 ?>

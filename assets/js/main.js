@@ -247,24 +247,22 @@
             });
         }
         // client stories
-        if ( $('#client_stories_wrap').length > 0 ) {
-            $('body').css({ 'overflow-x' : 'hidden' });
-            let clientStories = $('.client_stories');
-            let scrollerW = 700 * clientStories.length;
-            let scrollNum = scrollerW - (800 * 2);
-            $('#client_stories_scroller').css({ width: scrollerW + 'px' });
-            $('#client_stories_inner').css({ height : scrollerW + 'px' });
-            gsap.to('#client_stories_scroller',
-                { 
-                    scrollTrigger: {
-                        trigger: '#client_stories_inner',
-                        start: 'top top',
-                        end: 'bottom bottom',
-                        scrub: 1,
-                    },
-                    x: `-${scrollNum}px`
-                }
-            );
+        if ( $('.testimonials_single_main_content_section').length > 0 ) {
+            gsap.utils.toArray(".testimonials_single_main_content_section").forEach((section, index) => {
+                gsap.set(section, { opacity : 0.5 })
+                gsap.to(section,
+                    { 
+                        scrollTrigger: {
+                            trigger: section,
+                            start: 'top top+=280px',
+                            end: 'bottom bottom',
+                            scrub: true,
+                            once: false
+                        },
+                        opacity: 1
+                    }
+                );
+            });
         }
     }
 

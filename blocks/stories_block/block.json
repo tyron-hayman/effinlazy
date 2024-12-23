@@ -1,0 +1,17 @@
+{
+    "name": "acf/stories-block",
+    "title": "Stories Block",
+    "description": "Display your success stories on this page!",
+    "style": [ "file:./stories_block.css" ],
+    "script": ["file:./stories_block.js"],
+    "category": "effinlazy-block-category",
+    "icon": "format-status",
+    "keywords": ["testimonials"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "stories_block.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

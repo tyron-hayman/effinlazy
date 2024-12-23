@@ -28,7 +28,15 @@ $block .= '<div class="ef3_testimonials_block">';
                 while ( $the_query->have_posts() ) : $the_query->the_post();
                     $block .= '<div class="ef3_testimonials_block_testimonials_box">';
                         $urlData = str_replace(" ", "+", get_the_title());
-                        $bgImage = get_template_directory_uri() . '/assets/images/avatar.png';
+
+                        $words = explode(" ", get_the_title());
+                            $acronym = "";
+
+                            foreach ($words as $w) {
+                                $acronym .= mb_substr($w, 0, 1);
+                            }
+
+                        $bgImage = 'https://ui-avatars.com/api/?name=' . $acronym . '&background=040404&color=fff';
                         if ( has_post_thumbnail( get_the_ID() ) ) {
                             $bgImage = get_the_post_thumbnail( get_the_ID(), 'full' );
                         }
@@ -37,14 +45,6 @@ $block .= '<div class="ef3_testimonials_block">';
                         $block .= '</div>';
                         $block .= '<div class="ef3_testimonials_block_testimonials_author">';
                             $block .= '<div class="ef3_testimonials_block_testimonials_avatar" style="background: url(' . $bgImage . ') center center no-repeat"></div>';
-
-                            $words = explode(" ", get_the_title());
-                            $acronym = "";
-
-                            foreach ($words as $w) {
-                            $acronym .= mb_substr($w, 0, 1);
-}
-
                             $block .= '<h5>' . $acronym . '</h5>';
                         $block .= '</div>';
                         $block .= '</div>';

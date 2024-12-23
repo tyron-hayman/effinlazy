@@ -11,6 +11,7 @@ window.addEventListener("load", () => {
           });
     });
     }
+    if ( sectionImage.length > 0 ) {
         gsap.to(sectionImage[0].childNodes[0],
             { 
                 scrollTrigger: {
@@ -22,4 +23,5 @@ window.addEventListener("load", () => {
                 width: 0
             }
         );
+    }
 });

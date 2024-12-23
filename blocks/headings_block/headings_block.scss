@@ -11,20 +11,23 @@
 }
 
 .ef3_heading_block {
-    margin-bottom: 0px;
-    margin-top: 150px;
+    width: 90%;
+    margin: 150px auto 0 auto;
     h1 {
-        font-size: 4vw;
+        font-size: 6rem;
+        line-height: 6rem;
         font-weight: 400;
         color: v.$black;
     }
     h2 {
-        font-size: 3vw;
+        font-size: 4rem;
+        line-height: 4rem;
         font-weight: 400;
         color: v.$black;
     }
     h3 {
-        font-size: 2vw;
+        font-size: 3rem;
+        line-height: 3rem;
         font-weight: 400;
         color: v.$black;
     }
@@ -35,7 +38,8 @@
     }
     @media (max-width: v.$small) {
         h1, h2, h3 {
-            font-size: 2rem;
+            font-size: 4rem;
+            line-height: 4rem;
             font-weight: 400;
             color: v.$black;
         }
