@@ -11,11 +11,13 @@ get_header();
             <?php
             while ( have_posts() ) : the_post();
             $main_content = get_field('main_content', get_the_ID());
+            $headline = get_field('headline', get_the_ID());
             ?>
-                <div id="testimonials_single_sidebar">
-                    <h1><?php the_title(); ?></h1>
-                </div>
                 <div id="testimonials_single_main_content">
+                    <div class="testimonials_single_main_content_section">
+                        <h1><?php the_title(); ?></h1>
+                        <h4><?php echo $headline; ?></h4>
+                    </div>
                     <div class="testimonials_single_main_content_section">
                         <h2>Introduction</h2>
                         <p><?php echo $main_content["introduction"]; ?></p>
@@ -59,7 +61,7 @@ get_header();
                             }
                         ?>
                     </div>
-                    <div class="testimonials_single_main_content_section">
+                    <div class="testimonials_single_main_content_section single_testimonial">
                         <h2>Testimonial</h2>
                         <p><?php echo $main_content["testimonial"]; ?></p>
                     </div>

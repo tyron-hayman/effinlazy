@@ -10,6 +10,7 @@
     margin: 100px auto;
     position: relative;
     .ef3_stories_box {
+        display: block;
         position: sticky;
         border: rgba($color: v.$black, $alpha: 0.7) 2px solid;
         margin: 0 0 20px 0;
@@ -21,7 +22,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        min-height: 200px;
+        min-height: 250px;
         .ef3_stories_box_1 {
             width: 10%;
         }
@@ -54,6 +55,7 @@
             }
         }
         @media (max-width: v.$small) {
+            min-height: 400px;
             .ef3_stories_box_1, .ef3_stories_box_2, .ef3_stories_box_3 {
                 width: 100%!important;
             }

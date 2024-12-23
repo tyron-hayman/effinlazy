@@ -9,6 +9,7 @@
   position: relative;
 }
 .ef3_stories_block .ef3_stories_box {
+  display: block;
   position: sticky;
   border: rgba(21, 21, 21, 0.7) 2px solid;
   margin: 0 0 20px 0;
@@ -20,7 +21,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  min-height: 200px;
+  min-height: 250px;
 }
 .ef3_stories_block .ef3_stories_box .ef3_stories_box_1 {
   width: 10%;
@@ -54,6 +55,9 @@
   background: #FD644B;
 }
 @media (max-width: 980px) {
+  .ef3_stories_block .ef3_stories_box {
+    min-height: 400px;
+  }
   .ef3_stories_block .ef3_stories_box .ef3_stories_box_1, .ef3_stories_block .ef3_stories_box .ef3_stories_box_2, .ef3_stories_block .ef3_stories_box .ef3_stories_box_3 {
     width: 100% !important;
   }

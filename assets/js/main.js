@@ -246,20 +246,13 @@
                 );
             });
         }
-        // client stories
+        // Client success
         if ( $('.testimonials_single_main_content_section').length > 0 ) {
             gsap.utils.toArray(".testimonials_single_main_content_section").forEach((section, index) => {
-                gsap.set(section, { opacity : 0.5 })
+                gsap.set(section, { opacity : 0, y : 50 })
                 gsap.to(section,
                     { 
-                        scrollTrigger: {
-                            trigger: section,
-                            start: 'top top+=280px',
-                            end: 'bottom bottom',
-                            scrub: true,
-                            once: false
-                        },
-                        opacity: 1
+                        opacity: 1, y: 0, duration: 0.5, delay: (index + 1) * 0.25
                     }
                 );
             });

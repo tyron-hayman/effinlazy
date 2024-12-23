@@ -27,7 +27,7 @@ if ( $the_query->have_posts() ) {
             $bgImage = get_the_post_thumbnail( get_the_ID(), 'full' );
         }
 
-        $block .= '<div class="ef3_stories_box" style="top: ' . 200 + ($storyNum * 20) .'px;">';
+        $block .= '<div class="ef3_stories_box" style="top: ' . 200 + ($storyNum * 10) .'px;">';
             $block .= '<div class="ef3_stories_box_1">';
                 $block .= '<div class="ef3_stories_box_av" style="background: url(' . $bgImage . ') center center no-repeat;"></div>';
             $block .= '</div>';
