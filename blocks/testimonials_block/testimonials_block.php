@@ -8,7 +8,7 @@
 $ef3_testimonials_title = get_field( 'ef3_testimonials_title' );
 $ef3_testimonials_cta = get_field( 'ef3_testimonials_cta' );
 // get testimonials
-$args = array( 'post_type' => 'testimonials', 'posts_per_page' => 8 );
+$args = array( 'post_type' => 'testimonials', 'posts_per_page' => 8, 'order' => 'ASC', 'orderby' => 'date' );
 $the_query = new WP_Query( $args );
 $ef3_test_count = $the_query->found_posts;
 $avNum = 1;

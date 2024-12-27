@@ -68,10 +68,17 @@
     @media (max-width: v.$small) {
         .ef3_image_left_block_content {
             width: 90%;
+            h2 {
+                font-size: 2.5rem;
+            }
             .ef3_image_left_block_left, .ef3_image_left_block_right {
                 width: 100%;
                 margin-bottom: 50px;
             }
+        }
+        .ef3_ef3_image_left_block_btn {
+            text-align: center;
+            margin: 100px 5%;
         }
     }
 }

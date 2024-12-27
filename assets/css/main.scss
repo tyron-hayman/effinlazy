@@ -347,6 +347,9 @@ button:focus {
       }
       #search_results {
         width: calc(100% + 20px);
+        @media (max-width: v.$small) {
+            width: calc(100%);
+        }
         background: v.$black;
         .postResults {
             width: calc(100% - 20px);

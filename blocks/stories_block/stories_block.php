@@ -5,7 +5,7 @@
  * @param array $block The block settings and attributes.
  */
 
-$args = array( 'post_type' => 'testimonials', 'posts_per_page' => -1 );
+$args = array( 'post_type' => 'testimonials', 'posts_per_page' => -1, 'order' => 'ASC', 'orderby' => 'date' );
 $the_query = new WP_Query( $args );
 $block = '';
 $storyNum = 0;
@@ -27,7 +27,7 @@ if ( $the_query->have_posts() ) {
             $bgImage = get_the_post_thumbnail( get_the_ID(), 'full' );
         }
 
-        $block .= '<div class="ef3_stories_box" style="top: ' . 200 + ($storyNum * 10) .'px;">';
+        $block .= '<div class="ef3_stories_box" style="top: ' . 150 + ($storyNum * 10) .'px;">';
             $block .= '<div class="ef3_stories_box_1">';
                 $block .= '<div class="ef3_stories_box_av" style="background: url(' . $bgImage . ') center center no-repeat;"></div>';
             $block .= '</div>';
