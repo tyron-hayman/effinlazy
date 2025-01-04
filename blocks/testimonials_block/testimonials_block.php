@@ -20,7 +20,6 @@ $block .= '<div class="ef3_testimonials_block">';
     $block .= '<div class="ef3_testimonials_block_content">';
         $block .= '<div class="ef3_testimonials_block_title">';
             $block .= '<h3>' . $ef3_testimonials_title . '</h3>';
-            $block .= '<h4>8 / ' . $ef3_test_count  . '</h4>';
         $block .= '</div>';
         $block .= '<div class="ef3_testimonials_block_testimonials_wrap">';
             $block .= '<div class="ef3_testimonials_block_testimonials">';

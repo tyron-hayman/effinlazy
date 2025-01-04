@@ -299,11 +299,12 @@ add_action( 'init', 'create_posttype' );
 
 // Send mail
 function sendMail() {
+	$footercontent = get_field('footer_content', 'option');
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$subject = $_POST['subject'];
 	$message = getEmailBody($_POST['name'], $_POST['email'], $_POST['message']);
-	$to = get_bloginfo('admin_email');
+	$to = $footercontent['email'];
 	$response = '';
 
 	$headers[] = 'From: Effinlazy <noreply@effinlazy.com>';

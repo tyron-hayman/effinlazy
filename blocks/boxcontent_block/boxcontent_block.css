@@ -11,6 +11,7 @@
 .ef3_box_content_block {
   padding: 200px 0 0 0;
   position: relative;
+  overflow-x: hidden;
 }
 .ef3_box_content_block h2 {
   text-align: center;

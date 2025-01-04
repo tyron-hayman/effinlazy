@@ -123,13 +123,39 @@ body {
     }
     &.scrolled {
         background: rgba(255,255,255,0.1);
-        backdrop-filter: blur(2px);
-        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
     }
     .showOnMobile {
         display: none;
     }
+    .global_brochure_link a {
+        display: inline-block;
+        background: v.$black;
+        border-radius: 9999px;
+        -webkit-border-radius: 9999px;
+        -moz-border-radius: 9999px;
+        -o-border-radius: 9999px;
+        padding: 2px 20px;
+        font-weight: 600;
+        color: v.$white;
+        transition: all 0.5s ease-out;
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        font-size: 0.9rem;
+        &:hover {
+            background: v.$gold;
+            color: v.$white;
+        }
+    }
+    .showMobile {
+        display: none;
+    }
     @media (max-width: v.$small) {
+        .mainSiteNav_inner {
+            width: 95%;
+            padding: 0.5rem 2.5%;
+        }
         .showOnMobile {
             display: block;
         }
@@ -142,6 +168,12 @@ body {
                 margin: 0 10px;
                 font-size: 1.5rem;
             }
+        }
+        .showMobile {
+            display: block;
+        }
+        .hideMobile {
+            display: none;
         }
     }
 }
@@ -178,9 +210,9 @@ body {
             overflow: hidden;
             a {
                 display: block;
-                padding: 40px;
+                padding: 20px;
                 color: v.$white;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
         }
     }
@@ -552,7 +584,7 @@ button:focus {
   // Blog page
 
   #blog_page_wrapper {
-    width: 90%;
+    width: 95%;
     margin: 100px auto;
     min-height: 80vh;
     #blog_nav {
@@ -566,6 +598,7 @@ button:focus {
                 display: flex;
                 align-items: center;
                 gap: 10px;
+                margin: 0;
                 flex-wrap: wrap;
                 li {
                     list-style: none;
@@ -654,6 +687,9 @@ button:focus {
         #blog_content_wrap {
             .postResults {
                 width: 100%;
+                .postResultscontent {
+                    margin: 20px 0;
+                }
             }
         }
     }

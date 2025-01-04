@@ -21,6 +21,7 @@
 <?php
 $custom_logo_id = get_theme_mod( 'custom_logo' );
 $logoImage = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+$brocure_link = get_field('brocure_link', 'option');
 ?>
 <div id="mainSiteNav">
 <div class="mainSiteNav_inner">
@@ -48,6 +49,11 @@ $logoImage = wp_get_attachment_image_src( $custom_logo_id , 'full' );
         ?>
         <li class="showOnMobile openMobileMenu animationTargets"><a href="#"><i class="fa-solid fa-bars"></i></a>
         <li class="global_search_link animationTargets"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <li class="global_brochure_link animationTargets">
+            <a href="<?php echo $brocure_link; ?>" target="_blank">
+                <span class="hideMobile">Brochure</span>
+                <span class="showMobile"><i class="fa-solid fa-file-arrow-down"></i></a>
+            </a>
         </ul>
     </div>
 </div>
